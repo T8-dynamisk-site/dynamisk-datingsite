@@ -1,6 +1,21 @@
 @font-face {
-  font-family: "October Tamil";
-  src: url("fonts/OctoberTamil-Regular.ttf") format("truetype");
+  font-family: "Capriola";
+  src: url("../fonts/Capriola-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: "Capriola";
+}
+
+p {
+  font-family: "Roboto";
 }
 
 * {
