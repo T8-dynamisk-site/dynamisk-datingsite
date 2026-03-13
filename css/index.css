@@ -74,3 +74,95 @@ main {
     font-size: 1.3rem;
   }
 }
+.popular-users {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.popular-users h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.user-card {
+  background: white;
+
+  border: 3px solid #7f80b8;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.user-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.user-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.user-card-top h3 {
+  font-weight: 600;
+}
+
+.user-card-top span {
+  font-weight: 600;
+  color: #444;
+}
+
+.user-card-info p {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+.user-info-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 768px) {
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .user-card {
+    padding: 10px;
+  }
+
+  .user-card-top h3 {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  .user-card-top span {
+    font-size: 0.9rem;
+  }
+
+  .user-card-info p {
+    font-size: 0.85rem;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+}
