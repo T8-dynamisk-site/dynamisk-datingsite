@@ -1,17 +1,76 @@
-.content {
-  padding: 24px 16px 32px 16px;
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
-
-.content h1 {
-  font-family: "October Tamil", sans-serif;
-  font-size: 2.1rem;
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero-text h1 {
+  font-size: 3.5rem;
   line-height: 1.1;
-  margin-bottom: 16px;
-  color: #111;
+  margin-bottom: 20px;
 }
 
-.content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.hero-image {
+  flex: 0 0 240px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.match-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 16px 38px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #d1859d, #737ba7);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    align-items: center;
+    gap: 24px;
+    padding: 24px 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-image {
+    flex: 0 0 240px;
+  }
+
+  .hero-image img {
+    max-width: 240px;
+  }
+
+  .match-btn {
+    padding: 16px 38px;
+    font-size: 1.3rem;
+  }
 }
