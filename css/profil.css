@@ -1,0 +1,107 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  max-width: 700px;
+  padding: 1rem;
+}
+
+/* Left column: profile card with image + name/age */
+.profil {
+  grid-column: 1;
+  grid-row: 1;
+  border: 5px solid transparent;
+  border-radius: 25px;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #d1859d, #737ba7) border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profil img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+}
+
+.profil div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Right column: info list */
+.profile-info {
+  grid-column: 2;
+  grid-row: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+}
+
+.profile-info li {
+  display: flex;
+  align-items: center;
+  line-height: 3;
+  gap: 0.8em;
+}
+
+.profile-info li::before {
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.bio {
+  grid-column: 1 / -1;
+}
+
+.bio a {
+  background: linear-gradient(to right, #d1859d, #737ba7);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  width: fit-content;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.bio a:hover {
+  transform: scale(1.1);
+}
+
+/* Icons */
+.gender::before {
+  background-image: url("../img/gender.svg");
+}
+.location::before {
+  background-image: url("../img/location.svg");
+}
+.eye-color::before {
+  background-image: url("../img/eye.svg");
+}
+.hair-color::before {
+  background-image: url("../img/hair.svg");
+}
+.height::before {
+  background-image: url("../img/height.svg");
+}
+.weight::before {
+  background-image: url("../img/weight.svg");
+}
