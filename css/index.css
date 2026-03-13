@@ -3,6 +3,7 @@ main {
   margin: 0 auto;
   padding: 0 40px;
 }
+/* billede til højre */
 .hero {
   display: flex;
   align-items: center;
@@ -32,7 +33,7 @@ main {
   max-width: 220px;
   height: auto;
 }
-
+/* matche knap */
 .match-btn {
   display: inline-block;
   margin-top: 20px;
@@ -44,7 +45,7 @@ main {
   font-size: 1.3rem;
   background: linear-gradient(90deg, #d1859d, #737ba7);
 }
-
+/* responsive design */
 @media (min-width: 768px) {
   .hero {
     align-items: center;
@@ -74,6 +75,7 @@ main {
     font-size: 1.3rem;
   }
 }
+/* populære brugere */
 .popular-users {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -138,6 +140,7 @@ main {
   width: 16px;
   height: 16px;
 }
+/* responsive design */
 @media (max-width: 768px) {
   .popular-grid {
     grid-template-columns: repeat(2, 1fr);
