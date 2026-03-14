@@ -58,3 +58,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* Desktop */
+@media (min-width: 768px) {
+  .profil-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filter-sektion {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
