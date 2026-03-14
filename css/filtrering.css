@@ -1,0 +1,22 @@
+/* Filter sektion */
+.filtrering {
+  padding: 16px 8px;
+}
+
+.filter-sektion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filter-knap {
+  background: linear-gradient(90deg, #d1859d, #737ba7);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-family: "Capriola";
+  font-size: 0.9rem;
+  cursor: pointer;
+}
