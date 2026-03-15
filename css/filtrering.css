@@ -1,16 +1,8 @@
 /* Filter sektion */
 .filtrering {
-  padding: 16px 8px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-}
-
-.filter-sektion {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
+  padding: 24px 40px;
 }
 
 .filter-knap {
@@ -26,6 +18,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    width: 100%;
   }
 
   .match-sektion {
@@ -76,10 +69,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-}
-
-.filter-knap {
-  width: 100%;
 }
 
 .filter-sektion {
