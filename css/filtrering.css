@@ -44,9 +44,9 @@
 }
 
 .profil-billede {
-  background: #e0e0e0;
   width: 100%;
   aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .profil-info {
