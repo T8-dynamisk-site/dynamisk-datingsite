@@ -54,6 +54,10 @@ function visProfilkort(brugere) {
   profilGrid.innerHTML = "";
 
   brugere.forEach(bruger => {
+    const link = document.createElement("a");
+link.href = `profil.html?id=${bruger.id}`;
+link.classList.add("profil-kort-link");
+
     const kort = document.createElement("article");
     kort.classList.add("profil-kort");
 
@@ -66,7 +70,8 @@ function visProfilkort(brugere) {
       </div>
     `;
 
-    profilGrid.appendChild(kort);
+    link.appendChild(kort);
+profilGrid.appendChild(link);
   });
 }
 

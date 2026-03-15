@@ -98,6 +98,11 @@ select:focus {
   outline: 2px solid #d1859d;
 }
 
+.profil-kort-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
   .profil-grid {
