@@ -11,8 +11,8 @@ fetch("https://dummyjson.com/users?limit=0")
     udfyldDropdown("filter-køn", allebrugere.map(b => b.gender));
     udfyldDropdown("filter-lokalitet", allebrugere.map(b => b.address.city));
     udfyldDropdown("filter-alder", allebrugere.map(b => b.age));
-    udfyldDropdown("filter-højde", allebrugere.map(b => Math.round(b.height)));
-    udfyldDropdown("filter-vægt", allebrugere.map(b => Math.round(b.weight)));
+    udfyldIntervaller("filter-højde", allebrugere.map(b => b.height), 5, "cm");
+    udfyldIntervaller("filter-vægt", allebrugere.map(b => b.weight), 5, "kg");
     udfyldDropdown("filter-blodtype", allebrugere.map(b => b.bloodGroup));
 
     visProfilkort(allebrugere.slice(0, 16));
@@ -34,8 +34,14 @@ fetch("https://dummyjson.com/users?limit=0")
             (!køn || b.gender === køn) &&
             (!lokalitet || b.address.city === lokalitet) &&
             (!alder || b.age === Number(alder)) &&
-            (!højde || Math.round(b.height) === Number(højde)) &&
-            (!vægt || Math.round(b.weight) === Number(vægt)) &&
+            (!højde || (() => {
+                const [min, max] = højde.split("-").map(Number);
+                return b.height >= min && b.height < max;
+              })()) &&
+              (!vægt || (() => {
+                const [min, max] = vægt.split("-").map(Number);
+                return b.weight >= min && b.weight < max;
+              })()) &&
             (!blodtype || b.bloodGroup === blodtype)
           );
         });
@@ -74,4 +80,17 @@ function udfyldDropdown(id, værdier) {
       option.textContent = værdi;
       select.appendChild(option);
     });
+  }
+
+  function udfyldIntervaller(id, værdier, interval, enhed) {
+    const select = document.getElementById(id);
+    const min = Math.floor(Math.min(...værdier) / interval) * interval;
+    const max = Math.ceil(Math.max(...værdier) / interval) * interval;
+  
+    for (let i = min; i < max; i += interval) {
+      const option = document.createElement("option");
+      option.value = `${i}-${i + interval}`;
+      option.textContent = `${i} - ${i + interval} ${enhed}`;
+      select.appendChild(option);
+    }
   }
