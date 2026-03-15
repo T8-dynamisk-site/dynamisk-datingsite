@@ -45,8 +45,10 @@
   }
 
   .profil-kort {
-    background: white;
-    border: 3px solid #7f80b8;
+    background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #d1859d, #737ba7) border-box;
+    border: 3px solid transparent;
     border-radius: 18px;
     overflow: hidden;
     padding: 12px;
