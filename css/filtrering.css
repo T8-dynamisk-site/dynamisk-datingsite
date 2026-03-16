@@ -1,0 +1,107 @@
+/* Filter sektion */
+.filtrering {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px;
+}
+
+.filter-knap {
+    background: linear-gradient(90deg, #d1859d, #737ba7);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-family: "Capriola";
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .match-sektion {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  
+  .match-sektion h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .profil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .profil-kort {
+    background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #d1859d, #737ba7) border-box;
+    border: 3px solid transparent;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 12px;
+  }
+  
+
+.profil-billede {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.profil-info {
+  padding: 4px;
+  font-family: "Roboto";
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.profil-navn {
+  font-family: "Capriola";
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.filter-sektion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+select {
+  border: 2px solid #7f80b8;
+  border-radius: 6px;
+  color: #7f80b8;
+  background: white;
+}
+
+select:focus {
+  outline: 2px solid #d1859d;
+}
+
+.profil-kort-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .profil-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filter-sektion {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
