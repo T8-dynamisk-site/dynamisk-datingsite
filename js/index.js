@@ -34,6 +34,7 @@ function showUsers(userArray) {
     `;
   });
 }
+
 const burgerBtn = document.getElementById("burgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
