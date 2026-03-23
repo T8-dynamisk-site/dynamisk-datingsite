@@ -93,24 +93,8 @@ Vores arbejdsproces i Git:
 
 ## Kode
 
-I JS beugwe vi function og arrow functins afhængigt af behov.
-fx
-
-```javascript
-//function kode:
-async function loadPopularUsers() {
-  try {
-    const response = await fetch("https://dummyjson.com/users");
-    const data = await response.json();}}
-// arrow function:
-users.map(user => {
-  return `<h3>${user.firstName}</h3>`
-})
-```
-
-CSS selectors:
-Classes bruges til styling og id til JS.
-I vores projekt anvendes ID'er i JS til elementer der kun findes en gang på siden, såsom navigation og containers. Classes bruges til elementer der forekommer flere gang fx profilkort osv. det gør det nemmere at manipulere flere elementer i DOM'en.
+i JavaScript refererer vi typisk til elementer med id, når vi skal hente dem med getElementById()
+i CSS bruger vi oftest class, så flere elementer kan styles ens
 
 ## Funktionalitet
 
@@ -146,34 +130,18 @@ Dette endpoint bruges til at hente brugerdata som fx:
 
 ## dokumentation af funktion
 
-Eksempel på funktion brugt i projektet.
-Funktion: loadPopularUsers()
-funktionen henter brugerdata fra DummyJSON API og viser de første 8 brugerer på forsiden.
-Der er ingen parametre.
-funktionen returnere ikke en værdi, men manipulerer DOM'en og indsætter HTML.
+Funktionen showUsers bruges til at vise en liste af brugere på forsiden af websitet. Den modtager et array af brugere og genererer HTML, som indsættes i DOM’en, så brugerne bliver vist som kort.
+Funktionen spiller sammen med fetch, som henter data fra API’et (DummyJSON). Når data er hentet, sendes det videre til showUsers, som står for at vise det på siden.
 
 ```javascript
-//function kode:
-async function loadPopularUsers() {
-  const response = await fetch("https://dummyjson.com/users");
-  const data = await response.json();
-
-  const users = data.users.slice(0, 8);
-
-  popularGrid.innerHTML = users
-    .map(
-      (user) => `
-      <a href="profil.html?id=${user.id}" class="user-card">
-         <img src="${user.image}">
-         <h3>${user.firstName} ${user.lastName}</h3>
-      </a>
-  `,
-    )
-    .join("");
-}
-
-loadPopularUsers();
+fetch("https://dummyjson.com/users")
+  .then((res) => res.json())
+  .then((data) => {
+    showUsers(data.users.slice(0, 8));
+  });
 ```
+
+vi har brugt userArray: Et array af bruger-objekter, som indeholder informationer som navn, alder, billede og adresse
 
 Projektets formål har været at arbejde med:
 
