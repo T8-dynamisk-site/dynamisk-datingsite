@@ -141,7 +141,7 @@ fetch("https://dummyjson.com/users")
   });
 ```
 
-userArray: Et array af bruger-objekter, som indeholder informationer som navn, alder, billede og adresse
+vi har brugt userArray: Et array af bruger-objekter, som indeholder informationer som navn, alder, billede og adresse
 
 Projektets formål har været at arbejde med:
 
