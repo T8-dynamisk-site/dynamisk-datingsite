@@ -20,17 +20,23 @@ function showUsers(userArray) {
             <span>${user.age}</span>
           </div>
 
-          <p class="user-info-row">
-            <img src="img/gender.svg" alt="køn" class="icon">
-            ${user.gender === "female" ? "Kvinde" : "Mand"}
-          </p>
+         <p class="user-info-row">
+  <img src="img/gender.svg" alt="køn" class="icon">
+  <span>${user.gender === "female" ? "Kvinde" : "Mand"}</span>
+</p>
 
           <p class="user-info-row">
             <img src="img/location.svg" alt="by" class="icon">
-            ${user.address.city}
+            <span>${user.address.city}</span>
           </p>
         </div>
       </a>
     `;
   });
 }
+const burgerBtn = document.getElementById("burgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+burgerBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("show");
+});
